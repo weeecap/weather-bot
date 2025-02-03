@@ -1,5 +1,6 @@
 from geopy.geocoders import Nominatim
 from typing import NamedTuple
+from dataclasses import dataclass
 
 class Coordinates(NamedTuple):
     latitude: float
@@ -14,7 +15,8 @@ def get_coordinates(address: str) -> Coordinates:
     else:
         raise ValueError("Address not found")
 
-addres = input()
-coords = get_coordinates(addres)
-latitude = coords.latitude
-longitude = coords.longitude
+if __name__ == "__main__": 
+    addres = input()
+    coords = get_coordinates(addres)
+    latitude = coords.latitude
+    longitude = coords.longitude
