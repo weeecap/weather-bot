@@ -6,3 +6,8 @@ from aiogram.filters.command import Command
 
 def setup_routers(dp: Dispatcher):
     router = Router()
+
+    @router.message(Command(commands=['start']))
+    async def greet(msg:Message):
+        await callback_query.message.answer("Введите город") 
+        
