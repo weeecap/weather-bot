@@ -1,0 +1,7 @@
+lib/
+bin/
+.vscode/
+__pycache__/
+.config/
+.venv/
+.DS_Store
